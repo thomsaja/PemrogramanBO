@@ -15,8 +15,8 @@ public class KontakBuku {
 
     ArrayList<Kontak> list = new ArrayList<Kontak>();
 
-    public void SimpanKontak(Kontak kontakbaru) {
-        list.add(kontakbaru);
+    public void SimpanKontak(Kontak KontakBaru) {
+        list.add(KontakBaru);
     }
 
     public Kontak CariKontak(String Nama) {

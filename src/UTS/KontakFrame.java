@@ -229,12 +229,16 @@ public class KontakFrame extends javax.swing.JFrame {
     private void searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchActionPerformed
         String cari = txtCariNama.getText();
         Kontak hasil = kontak.CariKontak(cari);
-        JOptionPane.showMessageDialog(null, "Data Kontak" + "\nNama : " + hasil.getNama() + "\nAlamat : " + hasil.getAlamat() + "\nNo HP : " + hasil.getNoHP() + "\nEmail : " + hasil.getEmail(), "Kontak App - Cari Nama", JOptionPane.INFORMATION_MESSAGE);
+        if (txtCariNama.getText().equals(hasil.getNama())) {
+            JOptionPane.showMessageDialog(null, "Data Kontak" + "\nNama   : " + hasil.getNama() + "\nAlamat : " + hasil.getAlamat() + "\nNo HP  : " + hasil.getNoHP() + "\nEmail   : " + hasil.getEmail(), "Biodata Kontak App", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(null, "Data Kontak Tidak Ada", "Biodata Kontak App", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_searchActionPerformed
 
     private void viewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewActionPerformed
         ArrayList<Kontak> data = kontak.ListKontak();
-        String dataterisi = null;
+        String dataterisi = "";
         for (int i = 0; i < data.size(); i++) {
             int urutan = i + 1;
             if (dataterisi == null) {
