@@ -234,17 +234,17 @@ public class KontakFrame extends javax.swing.JFrame {
 
     private void viewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewActionPerformed
         ArrayList<Kontak> data = kontak.ListKontak();
-        String jumlahterisi = null;
+        String dataterisi = null;
         for (int i = 0; i < data.size(); i++) {
             int urutan = i + 1;
-            if (jumlahterisi == null) {
-                jumlahterisi = urutan + ". " + data.get(i).getNama();
+            if (dataterisi == null) {
+                dataterisi = urutan + ". " + data.get(i).getNama();
             } else {
-                jumlahterisi = jumlahterisi + urutan + ". " + data.get(i).getNama();
+                dataterisi = dataterisi + urutan + ". " + data.get(i).getNama();
             }
-            jumlahterisi = jumlahterisi + "\n";
+            dataterisi = dataterisi + "\n";
         }
-        JOptionPane.showMessageDialog(null, "Jumlah Kontak : " + data.size() + "\n" + jumlahterisi);
+        JOptionPane.showMessageDialog(null, "Jumlah Kontak : " + data.size() + "\n" + dataterisi);
     }//GEN-LAST:event_viewActionPerformed
 
     /**
