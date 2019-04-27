@@ -20,7 +20,7 @@ public class Kontak {
         this.Email = Email;
     }
 
-    Kontak() {
+    public Kontak() {
 
     }
 
