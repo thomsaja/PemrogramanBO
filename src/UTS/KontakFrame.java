@@ -250,7 +250,7 @@ public class KontakFrame extends javax.swing.JFrame {
             dataterisi = dataterisi + "\n";
         }
 
-        if (data.size() == 0) {
+        if (data.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Jumlah Kontak : " + data.size() + "\nTidak Ada Data", "Data Kontak", JOptionPane.INFORMATION_MESSAGE);
         } else {
             JOptionPane.showMessageDialog(null, "Jumlah Kontak : " + data.size() + "\n" + dataterisi, "Data Kontak", JOptionPane.INFORMATION_MESSAGE);
