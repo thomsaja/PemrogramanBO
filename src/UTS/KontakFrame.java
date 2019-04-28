@@ -220,7 +220,8 @@ public class KontakFrame extends javax.swing.JFrame {
     private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
         Kontak kntk = new Kontak(txtNama.getText(), txtAlamat.getText(), txtNoHandphone.getText(), txtEmail.getText());
         kontak.SimpanKontak(kntk);
-
+        JOptionPane.showMessageDialog(null, "Data Kontak Tersimpan", "Save", JOptionPane.INFORMATION_MESSAGE);
+        
         jumlah += 1;
         txtTotal.setText(String.valueOf(jumlah));
         kosongkan();
