@@ -238,7 +238,7 @@ public class KontakFrame extends javax.swing.JFrame {
 
     private void viewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewActionPerformed
         ArrayList<Kontak> data = kontak.ListKontak();
-        String dataterisi = "";
+        String dataterisi = null;
         for (int i = 0; i < data.size(); i++) {
             int urutan = i + 1;
             if (dataterisi == null) {
@@ -248,7 +248,12 @@ public class KontakFrame extends javax.swing.JFrame {
             }
             dataterisi = dataterisi + "\n";
         }
-        JOptionPane.showMessageDialog(null, "Jumlah Kontak : " + data.size() + "\n" + dataterisi);
+
+        if (data.size() == 0) {
+            JOptionPane.showMessageDialog(null, "Jumlah Kontak : " + data.size() + "\nTidak Ada Data", "Data Kontak", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(null, "Jumlah Kontak : " + data.size() + "\n" + dataterisi, "Data Kontak", JOptionPane.INFORMATION_MESSAGE);
+        }
     }//GEN-LAST:event_viewActionPerformed
 
     /**
